@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ReachabilityService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkService : NSObject
+
+- (instancetype)initWithReachabilityService:(id<ReachabilityService>)reachabilityService;
 
 @end
 

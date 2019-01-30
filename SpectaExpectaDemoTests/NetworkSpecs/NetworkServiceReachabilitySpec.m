@@ -15,5 +15,12 @@
 
 SpecBegin(NetworkServiceReachability)
 
+__block NetworkService *networkService;
+__block MockReachabilityService *reachabilityService;
+
+beforeEach(^{
+	reachabilityService = [MockReachabilityService new];
+	networkService = [[NetworkService alloc] initWithReachabilityService: reachabilityService];
+});
 
 SpecEnd

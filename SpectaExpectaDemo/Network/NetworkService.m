@@ -10,4 +10,14 @@
 
 @implementation NetworkService
 
+- (instancetype)initWithReachabilityService:(id<ReachabilityService>)reachabilityService {
+	self = [super init];
+
+	if (self) {
+		
+	}
+
+	return self;
+}
+
 @end
