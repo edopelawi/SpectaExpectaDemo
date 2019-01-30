@@ -14,6 +14,8 @@
 		8D9227302201AD5E00C09D33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D92272E2201AD5E00C09D33 /* LaunchScreen.storyboard */; };
 		8D9227332201AD5E00C09D33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9227322201AD5E00C09D33 /* main.m */; };
 		8D92273D2201AD5E00C09D33 /* SpectaExpectaDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92273C2201AD5E00C09D33 /* SpectaExpectaDemoTests.m */; };
+		8DD7F70C2202049E003B273E /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD7F70B2202049E003B273E /* Expecta.framework */; };
+		8DD7F70E220204A5003B273E /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD7F70D220204A5003B273E /* Specta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		8D9227382201AD5E00C09D33 /* SpectaExpectaDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectaExpectaDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92273C2201AD5E00C09D33 /* SpectaExpectaDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpectaExpectaDemoTests.m; sourceTree = "<group>"; };
 		8D92273E2201AD5E00C09D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD7F70B2202049E003B273E /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
+		8DD7F70D220204A5003B273E /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD7F70E220204A5003B273E /* Specta.framework in Frameworks */,
+				8DD7F70C2202049E003B273E /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,7 @@
 				8D9227222201AD5B00C09D33 /* SpectaExpectaDemo */,
 				8D92273B2201AD5E00C09D33 /* SpectaExpectaDemoTests */,
 				8D9227212201AD5B00C09D33 /* Products */,
+				8DD7F70A22020475003B273E /* Test Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,15 @@
 			path = SpectaExpectaDemoTests;
 			sourceTree = "<group>";
 		};
+		8DD7F70A22020475003B273E /* Test Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DD7F70D220204A5003B273E /* Specta.framework */,
+				8DD7F70B2202049E003B273E /* Expecta.framework */,
+			);
+			name = "Test Frameworks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +146,8 @@
 				8D9227342201AD5E00C09D33 /* Sources */,
 				8D9227352201AD5E00C09D33 /* Frameworks */,
 				8D9227362201AD5E00C09D33 /* Resources */,
+				8DD7F70F220204B0003B273E /* Copy Carthage Frameworks */,
+				8DD3099822021504005E7B06 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -197,6 +215,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DD3099822021504005E7B06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		8DD7F70F220204B0003B273E /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Specta.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Expecta.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Specta.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Expecta.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D92271C2201AD5B00C09D33 /* Sources */ = {
@@ -399,6 +459,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GX458V4RKG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpectaExpectaDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,6 +482,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GX458V4RKG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SpectaExpectaDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
