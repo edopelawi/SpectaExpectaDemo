@@ -15,6 +15,8 @@
 		8D9227332201AD5E00C09D33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9227322201AD5E00C09D33 /* main.m */; };
 		8D92273D2201AD5E00C09D33 /* SpectaExpectaDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92273C2201AD5E00C09D33 /* SpectaExpectaDemoTests.m */; };
 		8DD309A022021670005E7B06 /* MockReachabilityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD3099F22021670005E7B06 /* MockReachabilityService.m */; };
+		8DD309A3220219DD005E7B06 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD309A2220219DD005E7B06 /* NetworkService.m */; };
+		8DD309A5220219FF005E7B06 /* NetworkServiceReachabilitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD309A4220219FF005E7B06 /* NetworkServiceReachabilitySpec.m */; };
 		8DD7F70C2202049E003B273E /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD7F70B2202049E003B273E /* Expecta.framework */; };
 		8DD7F70E220204A5003B273E /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD7F70D220204A5003B273E /* Specta.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,9 @@
 		8DD3099B220215BD005E7B06 /* ReachabilityService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReachabilityService.h; sourceTree = "<group>"; };
 		8DD3099E22021670005E7B06 /* MockReachabilityService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockReachabilityService.h; sourceTree = "<group>"; };
 		8DD3099F22021670005E7B06 /* MockReachabilityService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockReachabilityService.m; sourceTree = "<group>"; };
+		8DD309A1220219DD005E7B06 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		8DD309A2220219DD005E7B06 /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		8DD309A4220219FF005E7B06 /* NetworkServiceReachabilitySpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkServiceReachabilitySpec.m; sourceTree = "<group>"; };
 		8DD7F70B2202049E003B273E /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		8DD7F70D220204A5003B273E /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				8DD3099A220215A8005E7B06 /* Protocols */,
+				8DD309A1220219DD005E7B06 /* NetworkService.h */,
+				8DD309A2220219DD005E7B06 /* NetworkService.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD3099D22021655005E7B06 /* Mocks */,
+				8DD309A4220219FF005E7B06 /* NetworkServiceReachabilitySpec.m */,
 			);
 			path = NetworkSpecs;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 			files = (
 				8D9227282201AD5B00C09D33 /* ViewController.m in Sources */,
 				8D9227332201AD5E00C09D33 /* main.m in Sources */,
+				8DD309A3220219DD005E7B06 /* NetworkService.m in Sources */,
 				8D9227252201AD5B00C09D33 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +323,7 @@
 			files = (
 				8DD309A022021670005E7B06 /* MockReachabilityService.m in Sources */,
 				8D92273D2201AD5E00C09D33 /* SpectaExpectaDemoTests.m in Sources */,
+				8DD309A5220219FF005E7B06 /* NetworkServiceReachabilitySpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
