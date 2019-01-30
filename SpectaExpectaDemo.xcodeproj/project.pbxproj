@@ -42,6 +42,7 @@
 		8D9227382201AD5E00C09D33 /* SpectaExpectaDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectaExpectaDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92273C2201AD5E00C09D33 /* SpectaExpectaDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpectaExpectaDemoTests.m; sourceTree = "<group>"; };
 		8D92273E2201AD5E00C09D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD3099B220215BD005E7B06 /* ReachabilityService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReachabilityService.h; sourceTree = "<group>"; };
 		8DD7F70B2202049E003B273E /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		8DD7F70D220204A5003B273E /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +89,7 @@
 		8D9227222201AD5B00C09D33 /* SpectaExpectaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8DD30999220215A1005E7B06 /* Network */,
 				8D9227232201AD5B00C09D33 /* AppDelegate.h */,
 				8D9227242201AD5B00C09D33 /* AppDelegate.m */,
 				8D9227262201AD5B00C09D33 /* ViewController.h */,
@@ -108,6 +110,22 @@
 				8D92273E2201AD5E00C09D33 /* Info.plist */,
 			);
 			path = SpectaExpectaDemoTests;
+			sourceTree = "<group>";
+		};
+		8DD30999220215A1005E7B06 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3099A220215A8005E7B06 /* Protocols */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8DD3099A220215A8005E7B06 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8DD3099B220215BD005E7B06 /* ReachabilityService.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8DD7F70A22020475003B273E /* Test Frameworks */ = {
