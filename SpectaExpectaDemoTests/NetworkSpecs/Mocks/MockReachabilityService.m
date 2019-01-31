@@ -22,7 +22,7 @@
 
 	if (self) {
 		self.isNetworkAvailableResult = NO;
-		self.isNetworkAvailableCalled = YES;
+		self.isNetworkAvailableCalled = NO;
 	}
 
 	return self;
@@ -36,7 +36,7 @@
 
 - (void)reset {
 	self.isNetworkAvailableResult = NO;
-	self.isNetworkAvailableCalled = YES;
+	self.isNetworkAvailableCalled = NO;
 }
 
 
