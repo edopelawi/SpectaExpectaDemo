@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1BC65722029C9E00EB78FC /* NetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BC65622029C9E00EB78FC /* NetworkRequest.m */; };
 		8D9227252201AD5B00C09D33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9227242201AD5B00C09D33 /* AppDelegate.m */; };
 		8D9227282201AD5B00C09D33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9227272201AD5B00C09D33 /* ViewController.m */; };
 		8D92272B2201AD5B00C09D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9227292201AD5B00C09D33 /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D1BC65522029C9E00EB78FC /* NetworkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequest.h; sourceTree = "<group>"; };
+		8D1BC65622029C9E00EB78FC /* NetworkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkRequest.m; sourceTree = "<group>"; };
 		8D9227202201AD5B00C09D33 /* SpectaExpectaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectaExpectaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9227232201AD5B00C09D33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D9227242201AD5B00C09D33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D1BC65422029C8A00EB78FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8D1BC65522029C9E00EB78FC /* NetworkRequest.h */,
+				8D1BC65622029C9E00EB78FC /* NetworkRequest.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		8D9227172201AD5B00C09D33 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +136,7 @@
 		8DD30999220215A1005E7B06 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8D1BC65422029C8A00EB78FC /* Entities */,
 				8DD3099A220215A8005E7B06 /* Protocols */,
 				8DD309A1220219DD005E7B06 /* NetworkService.h */,
 				8DD309A2220219DD005E7B06 /* NetworkService.m */,
@@ -311,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9227282201AD5B00C09D33 /* ViewController.m in Sources */,
+				8D1BC65722029C9E00EB78FC /* NetworkRequest.m in Sources */,
 				8D9227332201AD5E00C09D33 /* main.m in Sources */,
 				8DD309A3220219DD005E7B06 /* NetworkService.m in Sources */,
 				8D9227252201AD5B00C09D33 /* AppDelegate.m in Sources */,
