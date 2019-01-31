@@ -29,7 +29,13 @@
 - (void)sendRequest:(NetworkRequest * _Nonnull)request completion:(void (^_Nullable)(NSError * _Nullable))completion {
 
 	BOOL networkAvailable = self.reachabilityService.isNetworkAvailable;
-	completion([NSError new]);
+
+	if (networkAvailable) {
+		completion(nil);
+	} else {
+		completion([NSError new]);
+	}
+
 }
 
 @end
